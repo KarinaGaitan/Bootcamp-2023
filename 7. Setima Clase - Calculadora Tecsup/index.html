@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karina Gaitán Chunga</title>
+</head>
+<body>
+    <h1>Karina Gaitán Chunga</h1>
+    <!--Con script se declara todo lo de javascript-->
+    <script>
+        alert("Calculadora de números");
+        //Una ventana con un mensaje
+        let name = prompt ("Ingrese su nombre");
+        alert("Hola " + name);
+        alert("Sumador de números");
+        let number1 = prompt("Ingrese número 1");
+        let number2 = prompt("Ingrese número 2");
+    //alert(+number1 + +number2);
+    //Para sumar números se debe poner los signos positivos delante-->
+        alert("Que operación le gustaría hacer?");
+        let response = prompt("1. (suma), 2. (resta), 3. (división), 4. (multiplicación)");
+    //prompt es para ingreso de data
+        if (response == "1") {
+            alert(+number1 + +number2)
+        } else if (response == "2") {
+            alert(+number1 - +number2)
+        } else if (response == "3") {
+            alert(+number1 / +number2)
+        } else if (response == "4") {
+            alert(+number1 * +number2);
+        }
+    </script>
+</body>
+</html>

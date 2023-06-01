@@ -1,0 +1,354 @@
+.body {
+    margin: 0;
+    /*Para quitar el estilo por defecto*/
+    /*Para que las letras no se peguen al borde de la pantalla*/
+    background-color: #16181d;
+    color: white;
+    /*Para cambiar el color de las letras*/
+    font-family: monospace;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*para sacar el encabezado superior fija*/
+    width: 100%;
+    background-color: rgb(140, 175, 231);
+    box-shadow: 0 0 0.25rem 0 rgba(255, 255, 255, 0.5);
+    /*para generar sombras*/
+}
+
+.nav {
+    padding-top: 1rem;
+    /*espacio hacia arriba*/
+    padding-bottom: 1rem;
+    /*para crear variable es con --. En Java era let*/
+    --i-menu: 1;
+    --i-close: 0;
+}
+
+#menu:target{
+    --1-menu: 0;
+    --1-close: 1;
+}
+
+#menu:target .list--menu{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+
+/*Si no se pone . afectaría a toda la etiqueta que tenga el mismo nombre, pero con . solo afecta a la clase*/
+.container {
+    max-width: 1024px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    /*max ancho de píxeles*/
+    margin: auto;
+}
+
+.img {
+    display: block;
+    /* Considerar etiqueta object-file: cover cuando se ajusta al tamaño máximo posible dentro del contenedor sin perder la relación de aspecto original. El contenido puede recortarse si su relación de aspecto difiere de la del contenedor.*/
+    /*considerar block cuando quiero que respete el ancho y alto de la imagen*/
+}
+
+.img--logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    /*es para que el logo esté redondo, 50% siempre es máximo*/
+}
+
+.img--hero {
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    /*es para que el logo esté redondo, 50% siempre es máximo*/
+    box-shadow: -0.25rem -0.25rem 1rem 0.25rem rgba(0, 90, 255, 0.8) 0.25rem 5px 1rem 0.25rem #388f7f;
+}
+
+
+@media (min-width: 768px) {
+    .img--hero {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+.list {
+    /*estilos por defecto son: display, list style-list, margin block end, margin inline start, margin inline end, padding inline start*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list--menu {
+    position: fixed;
+    /*cuando se usa position para tener distancia usar top left right*/
+    opacity: 0;
+    top: 80px;
+    left: 0;
+    right: 0;
+    /*con esto obligo a que ocupe toda la pantalla*/
+    bottom: 0;
+    background-color: #00000080;
+    transition: opacity 0.25s;
+    pointer-events: none;
+    /*cuando quiero que toda la interactividad con el mouse se permita*/
+}
+
+@media (min-width: 768px) {
+    .list--menu{
+        opacity: 1;
+        pointer-events: initial;
+        position: initial;
+        background-color: initial;
+    }
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    /*Para que el texto del encabezado se vea más grueso*/
+    transition: 0.25s color;
+}
+
+.link:hover {
+    /*es cuando selecciono el menú del navegador superior se pone rojo cuando pongo encima el cursor*/
+    color: #149eca;
+}
+
+
+.hero {
+    min-height: 100vh;
+    /*si quiero imagen en forma de hoja: border - radius: 50% 2rem 50% 2rem;*/
+    background-image: linear-gradient(#00000080, #00000080), url(https://i.postimg.cc/xjb9gm3k/8151a41973daf5831d012e950e7caefd-download.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*para que todo se centre*/
+    /*si quiero que la imagen rote, etiqueta transform: rotateY(180deg);*/
+}
+
+.hero::before {
+    /*Para comenzar a trabajar en el posicionamiento, pseudo elemento ::*/
+    content: "";
+}
+
+.card {
+    max-width: 512px;
+}
+
+.card__body {
+    /*quiero separar a mis hijos*/
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /*Alineación a la izquierda*/
+    gap: 0.75rem;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.card__title--lg {
+    font-size: 1.5rem;
+}
+
+.card__text {
+    /*Los encabezados tienen margin por defecto*/
+    margin: 0;
+}
+
+@media(min-width:768px) {
+    .card__body {
+        font-size: 1rem;
+    }
+
+    .card__title {
+        font-size: 1.5rem;
+    }
+
+    .card__title--lg {
+        font-size: 1.75rem;
+    }
+
+    .card__text {
+        font-size: 1rem;
+    }
+}
+
+.icon {
+    /*padding: 0.5rem;*/
+    display: flex;
+    font-size: 1.5rem;
+    color: white;
+    /*border: 1px solid white;*/
+    /*box-shadow: 0 0 0 0.125rem #149eca;
+    /*border-radius: 50%;
+    /*borde del icono*/
+    /*overflow:hidden;*/
+    text-decoration: none;
+}
+
+.icon i {
+    display: flex;
+}
+
+.icon--menu {
+    transform: scale(var(--1--menu));
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.25s;
+}
+
+.icon--close {
+    transform: scale(var(--1--close));
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.25s;
+}
+
+.icon--menu{
+    position: absolute;
+    right: 1rem;
+}
+
+.icon--lg {
+    font-size: 1.75rem;
+}
+
+@media(min-width:768px) {
+    .icon {
+        font-size: 1.625rem;
+    }
+}
+
+.button {
+    display: flex;
+    padding: 0.5em 2em;
+    border: none;
+    border-radius: 1rem;
+    background-color: #149eca;
+    color: white;
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 0.25s, filter 0.25s;
+}
+
+.button:hover {
+    box-shadow:
+        0 0 0 0.125rem 0.0625rem #149eca,
+        0 0 0 0.25rem 0.125rem #149eca;
+    filter: brightness(1.125);
+}
+
+@media (min-width: 768px) {
+    .button {
+        font-size: 1rem;
+    }
+}
+
+.flexbox {
+    display: flex;
+    /*Flexibilizar a mis hijos para que ocupen el menor espacio posible*/
+}
+
+.flexbox--responsive{
+    align-items: center;
+    justify-content: center;
+}
+
+.flexbox--responsive{
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .flexbox--responsive{
+        flex-direction: row;
+    }
+}
+
+.flexbox--header {
+    align-items: center;
+    /*siempre utilizar para alinear verticalmente */
+    justify-content: space-between;
+    /*Siempre utilizar para justificar de manera horizontal*/
+}
+
+.d-flex {
+    display: flex;
+}
+
+.gap-sm {
+    gap: 1.Srem;
+}
+
+.gap-xs {
+    gap: 1.5rem;
+    /*espaciado entre el encabezado*/
+    /*espaciado entre íconos de redes sociales*/
+}
+
+.gap-md {
+    gap: 1rem;
+}
+
+.color-primary {
+    /*text-shadow: 0 0 0 #149eca;*/
+    /*Sólo en caso que tenga una sombra*/
+    color: #149eca;
+
+}
+
+/*media query*/
+/*768px es para tablets*/
+
+.d-none {
+    display: none;
+}
+
+@media (min-width:768px) {
+    .md\:d-block {
+        display: block;
+    }
+
+    .md\:d-none{
+        display: none;
+    }
+}
+
+/*Si con el celular no se puede visualizar bien, aplica esto*/
+/*media query, para responsive web design*/
+/*768px es para tablets*/
+
+.g-layout {
+    display: grid;
+}
+
+.g-layout--1-1 {
+    grid-template-columns: 1fr;
+}
+
+.g-layout--center {
+    align-items: center;
+    justify-items: center;
+}
+
+@media (min-width: 768px) {
+    .g-layout--1-1 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+

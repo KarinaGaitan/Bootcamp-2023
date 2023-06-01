@@ -1,0 +1,86 @@
+body {
+    /*background-color: skyblue*/
+    min-height: 100vh;
+    margin: 0;
+    background-image: url(https://th.bing.com/th/id/R.8d3db8177efd9afc6d1e69010ea21d1a?rik=Qrh7Rb%2boaAReAg&riu=http%3a%2f%2fwww.photos-public-domain.com%2fwp-content%2fuploads%2f2012%2f01%2fcrumpled-blue-paper-texture.jpg&ehk=Caao43TsmdbuhNG6LXFBEM%2bzfgXp0c48ribBaObNxJg%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-position: center;
+    color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main {
+    max-width: 512px;
+    /*ancho de la tarjeta*/
+    padding: 16px;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(28px);
+    /*para que la imagen tenga una sombra--*/
+    border: 1px red solid;
+    box-shadow: rgb(196, 231, 245);
+    border-radius: 16px;
+    text-align: center;
+    gap: 8px;
+    /*cuando hay display flex en ul*/
+}
+
+.Skill{
+    background-color: skyblue;
+    padding: 4px 16px;
+    border-radius: 16px;
+}
+
+img {
+    display: block;
+    border-radius: 50%;
+}
+
+h1,
+h2 {
+    margin: 0;
+    color: antiquewhite;
+}
+
+h1 {
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+h2 {
+    font-size: 14px;
+    color: antiquewhite;
+}
+
+h2, span {
+    font-weight: 400;
+    color: antiquewhite;
+}
+
+p {
+    font-size: 12px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /*para poner bullets*/
+    display: flex;
+    /*es para que todo el contenido vaya hacia abajo*/
+    gap: 16px;
+    /*cuando hay display flex en ul*/
+}
+
+a {
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+
+
+

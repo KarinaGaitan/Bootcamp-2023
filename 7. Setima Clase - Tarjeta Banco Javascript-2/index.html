@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viweport" content="width-device-widt" />
+    <title>Tarjeta de Banco</title>
+    <!--Style es para incrustar código CSS-->
+</head>
+
+<body>
+    <h1>Tarjeta de Banco</h1>
+
+    <script>
+        alert("Bienvenido al Banco Estafador");
+        //Saca ventana y muestra contenido
+        let cardnumber = prompt("Por favor ingrese sus primeros seis dígitos");
+        //Let es para crear variables
+        // cardnumber es para guardar lo que el usuario indique
+        //Saca ventana y solicita ingresar numeración
+        //BCP 455788 && Interbank 421355 && BBVA 455103
+        //Si su tarjeta es  xx número es del banco xxx caso contrario es de xx
+        let validationcard = false;
+        //En primera opción la validación de la tarjeta es falsa, pero si cumple alguna de las opciones siguientes validación sería verdadera
+        switch (cardnumber) {
+            case "455786":
+                alert("Usted es BCP");
+                alert("Muchas Gracias por ser parte de BCP");
+                validationcard = true;
+                break;
+            case "421355":
+                alert("Usted es Interbank");
+                alert("Muchas Gracias por ser parte de Interbank");
+                validationcard = true;
+                break;
+            case "455103":
+                alert("Usted es BBVA");
+                alert("Muchas Gracias por ser parte de BBVA");
+                validationcard = true;
+                break;
+            default:
+                alert("Nosotros no trabajamos con su banco");
+                break;
+        }
+        //default es para cerrar el proceso
+        //para evaluar si una tarjeta está dentro de una base de datos
+
+        if (validationcard) {
+            //let bd = {
+            //    database1: "455786455786",
+            //    database2: "421355421355",
+            //    database3: "455103455103",
+            //}
+
+            let digital = {
+            database1: {
+                cardnumber:455786455786,
+                money: 12345
+            },
+            database2: {
+                cardnumber:421355421355,
+                money: 12345
+            },
+            database3: {
+                cardnumber:455103455103,
+                money: 12345
+            },
+            }
+            cardnumber = prompt("Ingrese su número de tarjeta completa")
+            if (digital.database1.cardnumber == cardnumber) {
+                alert("Gracias 1");
+            } else if(digital.database2.cardnumber == cardnumber) {
+                alert("Gracias 2");
+            } else if(digital.database3,cardnumber == cardnumber) {
+                alert("Gracias 3");
+            } else {
+                alert("No coincide con nuestra base de datos")
+            }
+        } else {
+            alert("No cambió nada");
+        }
+    </script>
+</body>
+
+</html>

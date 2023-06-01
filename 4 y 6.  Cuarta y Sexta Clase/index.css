@@ -1,0 +1,211 @@
+.body {
+    /*clase semántica*/
+    margin: 0;
+    background-color: #56607747;
+    color: blueviolet;
+    font-family: monospace;
+}
+
+.header {
+    /*clase semántica*/
+    position: fixed;
+    /*sacar el encabezado y ponerlo en la posición que yo quiera*/
+    top: 0;
+    /*distancia del margen superior*/
+    left: 0;
+    /*distancia del margen izquierda*/
+    /*Por defecto los position son estáticos */
+    background-color: rgba(0, 0, 0, 0.058);
+    /*Para ver intensidad de fondo, si quiero más oscuro incremento la intensidad*/
+    width: 100%;
+    /*ancho*/
+    box-shadow: 0 0 0.125rem 0 blueviolet;
+    /*Para que se vea el fin del header*/
+
+}
+
+.nav {
+    /*clase semántica*/
+    padding: 1rem 5rem 5rem 0rem;
+    /*Es la abreviatura de padding top, right, botom, left, es espaciado como las manecillas del reloj.
+    1rem aplica espaciado para todos los lados 16px*/
+    /* El primer rem es hacia arriba,  hacia abajo, el segundo es hacia los lados y el último es hacia abajo*/
+}
+
+.container {
+    /*clase general*/
+    /*La única preocupación es que el contenido no se pegue a las paredes*/
+    padding-right: 1rem;
+    padding-left: 1rem;
+    max-width: 1024px;
+    /*Máxima cantidad de caracteres*/
+    margin: 0 auto;
+    /*se puede usar con cualquier atributo pero de preferencia SIEMPRE usar con div*/
+}
+
+.flexbox {
+    /*clase general*/
+    display: flex;
+}
+
+.flexbox-header {
+/*clase general*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flexbox-center {
+    align-items: center;
+    justify-content: center;
+}
+
+/*.flexbox-hero>div {
+    flex: 1;
+/*es el hijo del container para hacer una web responsive
+}*/
+
+/*.flexbox-hero>img {
+    flex: 1;
+/*es el hijo del container para hacer una web resposive
+}*/
+
+/*.g-layout {
+    display: grid;
+}
+    /*es para generar mallas */
+
+/*.g-layout-1-1{
+    grid-template-columns: 1fr 1fr;
+}*/
+
+.img {
+    display: block;
+}
+
+.img--logo {
+    /*modificadora tienen 3 atributos*/
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.img--hero {
+    /*modificadora tienen 3 atributos*/
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+}
+
+.list {
+    /*Estilos por defecto, siempre que haya list tiene que existir*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    color: blueviolet;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.hero {
+    min-height: 100vh;
+    background-image: URL(./Fondo\ Pantalla.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    /*Los dos últimos son obligatorios para centrar contenido*/
+}
+
+
+
+/*.btn-grad {
+    background-image: linear-gradient(to right, #5C2580 0%, yellow 51%, #5c2580 100%);
+    margin: 10px;
+    /*margin es empujar hacia los lados*/
+    /*margin-top: 64px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    box-shadow: 0 0 20px black;
+    border-radius: 10px;
+    display: block;
+}
+/*btn-grad es para hacer un botón con colores gradientes*/
+
+/*.btn-grad: hover {
+    background-positon: :right center;
+    /*cambio de dirección */
+    /*color: #fff;
+    text-decoration: none;
+}*/
+
+.card {
+    width: min (512px; 100%);
+    /*Container es de 1024px pantalla completa*/
+    box-shadow: 0 0 1rem 0 white;
+}
+
+.card__body {
+    gap: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    /*gap es para ver la separación entre palabras que se encuentran en el navegador*/
+}
+
+.card__title {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.card__subtitle {
+    font-size: 1.125rem;
+    margin: 0;
+    color: #9413c3ab;
+}
+
+.card__Text{
+    font-size: 0.875rem;
+    display: 0;
+}
+
+.button {
+    display: inline-block;
+    /*display block si quiero que ocupe todo el ancho del texto*/
+    padding: 0.5em 2em;
+    /*em es la equivalencia de font size en rem*/
+    text-decoration: none;
+    text-align: center;
+    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9  51%, #4776E6  100%);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    /*background-size: 200% auto;*/
+    font-weight: 700;
+    font-family: monospace;
+    cursor: pointer;
+    /*es para que en cada boton aparezca la mano del cursor*/
+    color: white;
+    /*box-shadow: 0 0 20px #eee;*/
+    transition: 0.5s;
+    box-sizing: border-box;
+  }
+
+ .d-flex {
+    display: flex;
+    /*se llama utilitario*/
+ }
+
+.f-wrap-wrap {
+    flex-wrap: wrap;
+}
+
+.gap-2xs {
+    gap: 0.5rem;
+}
+
