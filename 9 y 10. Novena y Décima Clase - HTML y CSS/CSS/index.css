@@ -38,6 +38,10 @@
     pointer-events: initial;
 }
 
+.section{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
 
 /*Si no se pone . afectaría a toda la etiqueta que tenga el mismo nombre, pero con . solo afecta a la clase*/
 .container {
@@ -46,6 +50,14 @@
     padding-left: 1rem;
     /*max ancho de píxeles*/
     margin: auto;
+}
+
+.title{
+    font-size: 2rem;
+    margin: 0;
+    /*quitar el estilo por defecto*/
+    color: #149eca;
+    text-align: center;
 }
 
 .img {
@@ -204,14 +216,14 @@
 }
 
 .icon--menu {
-    transform: scale(var(--1--menu));
+    transform: scale(var(--1-menu));
     position: absolute;
     right: 1rem;
     transition: transform 0.25s;
 }
 
 .icon--close {
-    transform: scale(var(--1--close));
+    transform: scale(var(--1-close));
     position: absolute;
     right: 1rem;
     transition: transform 0.25s;
@@ -291,6 +303,10 @@
     display: flex;
 }
 
+.f-direction-column {
+    flex-direction: column;
+}
+
 .gap-sm {
     gap: 1.Srem;
 }
@@ -341,6 +357,11 @@
     grid-template-columns: 1fr;
 }
 
+.g-layout--1-1-1 {
+    grid-template-columns: 1fr;
+}
+
+
 .g-layout--center {
     align-items: center;
     justify-items: center;
@@ -349,6 +370,9 @@
 @media (min-width: 768px) {
     .g-layout--1-1 {
         grid-template-columns: 1fr 1fr;
+    }
+    .g-layout--1-1-1 {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
