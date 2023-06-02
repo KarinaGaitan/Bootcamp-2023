@@ -1,3 +1,11 @@
+/*El último estilo es el que se aplica en caso de conflicto*/
+/*root se crea todas las variables para todos los componentes de a web en general*/
+
+:root {
+    --main-primary-color: #0788b3;
+    --primary-text-color: white;
+
+}
 .body {
     margin: 0;
     /*Para quitar el estilo por defecto*/
@@ -56,7 +64,7 @@
     font-size: 2rem;
     margin: 0;
     /*quitar el estilo por defecto*/
-    color: #149eca;
+    color: var(--main-primary-color);
     text-align: center;
 }
 
@@ -131,7 +139,7 @@
 
 .link:hover {
     /*es cuando selecciono el menú del navegador superior se pone rojo cuando pongo encima el cursor*/
-    color: #149eca;
+    color: var(--primary-text-color);
 }
 
 
@@ -158,6 +166,9 @@
 }
 
 .card__body {
+    background-color: #2b303b;
+    padding: 1rem;
+    border-radius: 1rem;
     /*quiero separar a mis hijos*/
     display: flex;
     flex-direction: column;
@@ -204,7 +215,7 @@
     font-size: 1.5rem;
     color: white;
     /*border: 1px solid white;*/
-    /*box-shadow: 0 0 0 0.125rem #149eca;
+    /*box-shadow: 0 0 0 0.125rem var(--main-primary-color);
     /*border-radius: 50%;
     /*borde del icono*/
     /*overflow:hidden;*/
@@ -216,14 +227,14 @@
 }
 
 .icon--menu {
-    transform: scale(var(--1-menu));
+    transform: scale(var(--i-menu));
     position: absolute;
     right: 1rem;
     transition: transform 0.25s;
 }
 
 .icon--close {
-    transform: scale(var(--1-close));
+    transform: scale(var(--i-close));
     position: absolute;
     right: 1rem;
     transition: transform 0.25s;
@@ -249,7 +260,7 @@
     padding: 0.5em 2em;
     border: none;
     border-radius: 1rem;
-    background-color: #149eca;
+    background-color: var(--main-primary-color);
     color: white;
     font-family: monospace;
     font-size: 0.75rem;
@@ -261,8 +272,8 @@
 
 .button:hover {
     box-shadow:
-        0 0 0 0.125rem 0.0625rem #149eca,
-        0 0 0 0.25rem 0.125rem #149eca;
+        0 0 0 0.125rem 0.0625rem var(--main-primary-color),
+        0 0 0 0.25rem 0.125rem var(--main-primary-color);
     filter: brightness(1.125);
 }
 
@@ -322,9 +333,9 @@
 }
 
 .color-primary {
-    /*text-shadow: 0 0 0 #149eca;*/
+    /*text-shadow: 0 0 0 var(--main-primary-color);*/
     /*Sólo en caso que tenga una sombra*/
-    color: #149eca;
+    color: var(--main-primary-color);
 
 }
 
